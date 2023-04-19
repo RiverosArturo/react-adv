@@ -46,7 +46,7 @@ export const Navigation = () => {
                                     element={ <Component /> } />
                             ))
                         }
-                        <Route path="/*" element={ <Navigate to={ routes[0].to } replace /> } />
+                            <Route path="/*" element={ <Navigate to={ routes[0].to } replace /> } />
                         {/* <Route path="lazy1" element={ <LazyPage1 /> } />
                         <Route path="lazy2" element={ <LazyPage2 /> } />
                         <Route path="lazy3" element={ <LazyPage3 /> } />
