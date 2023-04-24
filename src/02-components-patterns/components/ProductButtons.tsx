@@ -9,12 +9,22 @@ import styles from '../styles/styles.module.css';
 // }
 
 // export const ProductButtons = ( { counter, increaseBy }:ProductButtonsProps ) => {
-export const ProductButtons = () => {
+
+export interface Props{
+    className?: string;
+    activeBtnClass?: string;
+    style?: React.CSSProperties;
+}
+
+export const ProductButtons = ({ className, style }:Props) => {
 
     //Heredar al hijo
     const { increaseBy, counter } =useContext( ProductContext );
     return (
-        <div className={ styles.buttonsContainer }>
+        <div 
+            className={ `${ styles.buttonsContainer } ${ className }` }
+            style={ style }    
+        >
             <button 
                 className={ styles.buttonMinus }
                 onClick={ () => increaseBy( -1 ) }> - </button>
